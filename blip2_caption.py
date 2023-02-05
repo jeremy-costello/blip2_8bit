@@ -26,7 +26,8 @@ def main():
 
 
 class Captioner:
-    def __init__(self, name, model_type, load_in_8bit):
+    def __init__(self, name, model_type, load_in_8bit, num_beams,
+                 length_penalty, repetition_penalty):
         self.num_beams = num_beams
         self.length_penalty = length_penalty
         self.repetition_penalty = repetition_penalty
