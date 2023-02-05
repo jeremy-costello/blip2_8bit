@@ -1,7 +1,6 @@
 import os
 import gc
 import torch
-import torch.nn as nn
 from PIL import Image
 from lavis.models import load_model_and_preprocess
 
@@ -60,7 +59,7 @@ class Captioner:
             if len(list(module.children())) > 0:
                 self.replace_8bit_linear(module, threshold, module_to_not_convert)
 
-            if isinstance(module, nn.Linear) and name != module_to_not_convert:
+            if isinstance(module, torch.nn.Linear) and name != module_to_not_convert:
                 with init_empty_weights():
                     model._modules[name] = bnb.nn.Linear8bitLt(
                         module.in_features,
