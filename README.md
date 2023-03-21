@@ -1,5 +1,6 @@
 # blip2_8bit
-BLIP-2 Captioning with 8-bit Quantization
+BLIP-2 Captioning with 8-bit Quantization. \
+I made this before HuggingFace had integrated the BLIP-2 model. Probably better to use [their implementation](https://huggingface.co/docs/transformers/main/model_doc/blip-2) now, which supports their 8-bit quantization.
 
 # REQUIREMENTS
 [accelerate](https://github.com/huggingface/accelerate) \
